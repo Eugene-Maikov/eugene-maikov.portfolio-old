@@ -57,6 +57,7 @@ hr {
         ),
         url("../images/Layer.jpg") center no-repeat;
     background-size: cover;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
