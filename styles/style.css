@@ -300,8 +300,20 @@ p.footer__social{
 
 
 
-/* ============== MEDIA ============= */
+
+
+
+
+
+
+
+
+/* ===========================================
+            MEDIA
+=============================================*/
+
 @media (max-width: 1160px) {
+    /* ---------GRID---------- */
     .container{
         width: 100%;
     }
@@ -327,8 +339,9 @@ p.footer__social{
     .col-4:last-child{
         margin-right: 0;
     }
+    /* -------------------------------- */
 
-
+/* ---------portfolio---------- */
     .portfolio__item{
         width: 300px;
         
@@ -343,10 +356,7 @@ p.footer__social{
         font-size: 16px;
     }
 
-
-    
-
-
+/* ---------header---------- */
     .header{
         padding-left: 15px;
         padding-right: 15px;
@@ -367,6 +377,8 @@ p.footer__social{
     .title {
         font-size: 36px;
     }
+
+    /* ---------footer---------- */
     .footer {
         padding-top: 70px;
         padding-bottom: 60px;
@@ -375,11 +387,80 @@ p.footer__social{
         display: flex;
         flex-direction: column;
     }
-
-
-
 }
 
 @media (max-width: 990px){
 
+/* ---------portfolio---------- */
+    .row__l__R{
+        display: flex;
+        justify-content: center;
+    }
+    .row__left{
+        margin-right: 30px;
+
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        display: inline-block;
+        vertical-align: top;
+        
+    }
+    .row__right{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        display: inline-block;
+        vertical-align: top;
+    }
+    .portfolio__item{
+        height: 300px;
+    }
+
+    /* ---------arguments---------- */
+    .arguments__suptitle{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .arguments-tem__img{
+      margin-top: 0;
+    }
+    .arguments__item{
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (max-width: 770px){
+
+/* ---------portfolio---------- */
+.row__l__R{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row__left{
+    margin-right: 0;
+    margin-bottom: -30px;
+}
+
+/* ---------arguments---------- */
+.arguments__item{
+    height: 200px;
+}
+.bg__white{
+    width: 350px;
+ 
+}
+.arguments-tem__img{
+    width: 50px;
+    height: 50px;
+
+}
+
+@media (max-width: 575px){
+    
 }
