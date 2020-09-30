@@ -528,19 +528,14 @@ p.footer__social{
 
 
 
-@media (max-width: 575px){
-    .col-4{
-        margin-right: 0;
-    }
-
-    
+@media (max-width: 575px){    
     .arguments__suptitle{
         padding-left: 15px;
         padding-right: 15px;
     }
-
     .footen__1coll{
         width: 300px;
+        margin-right: 0;
     }
     .header__arrow{
         bottom: 10px;
