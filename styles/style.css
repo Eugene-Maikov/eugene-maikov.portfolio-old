@@ -491,5 +491,15 @@ p.footer__social{
 
 
 @media (max-width: 575px){
+
+
     
+    .arguments__suptitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footen__1coll{
+        width: 300px;
+    }
 }
