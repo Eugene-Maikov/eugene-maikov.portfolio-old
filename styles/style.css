@@ -502,4 +502,7 @@ p.footer__social{
     .footen__1coll{
         width: 300px;
     }
+    .header__arrow{
+        bottom: 10px;
+    }
 }
