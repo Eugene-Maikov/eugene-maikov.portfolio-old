@@ -529,7 +529,9 @@ p.footer__social{
 
 
 @media (max-width: 575px){
-
+    .col-4{
+        margin-right: 0;
+    }
 
     
     .arguments__suptitle{
