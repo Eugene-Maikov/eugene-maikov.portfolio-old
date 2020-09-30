@@ -180,11 +180,11 @@ a{
     color: #fff;
 }
 .bg__white{
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.8);
     transition: 0.2s ease-out;
 }
 .bg__white:hover{
-    background-color: rgb(175, 218, 255);
+    background-color: rgb(255, 255, 255);
 }
 .arguments__suptitle{
     padding-bottom: 80px;
