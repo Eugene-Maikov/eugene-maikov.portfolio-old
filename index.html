@@ -1,250 +1,1099 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Sans+Caption:wght@400;700&display=swap"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200,300;0,400;1,300;1,700&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="css/style.css">
     <title>Сайт портфолио</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        
+    </script>
+
 </head>
-<body>
-     <!-- Sprite -->
-     <svg style="display: none;">
-        <symbol id="arrow" viewBox="0 0 491.996 491.996">
-            <g>
-                <path d="M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848
-                    L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128
-                    c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084
-                    c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224
-                    C491.996,136.902,489.204,130.046,484.132,124.986z" />
-            </g>
-        </symbol>
-        <symbol id="vk" viewBox="0 0 24 24">
-            <g>
-                <path
-                    d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z" />
-            </g>
-        </symbol>
-        <symbol id="inst" viewBox="0 0 511 511.9">
-            <g>
-                <path
-                    d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
-                <path
-                    d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" />
-                <path
-                    d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
-            </g>
-        </symbol>
-    </svg>
+
+<body><!-- class="no-scroll" -->
+    
 
 
-    <!-- -------Header--------- -->
-    <!-- ---------------------- -->
-    <div class="header">
-        <div class="header__title">Евгений Майков</div>
-        <div class="header__slogan">Верстка сайтов на HTML и CSS, обработка фото <br>HTML5 CSS3 JS jQuery Photoshop</div>
-        <a href="#pf" class="header__arrow">
-            <svg class="header__arrow">
-                <use xlink:href="#arrow"></use>
-            </svg>
-        </a>
+    <!------------------HEADER-------------->
+    <header class="header" id="up">
+        <div class="container">
+            <div class="header__inner">
+                <div class="user">
+                    <div class="user__avatar">
+                        <img src="images/S6Tna8aAk0o.png" width="57px" alt="">
+                    </div>
+                    <div class="user__content">
+                        <div class="user__name">Евгений <br> Майков</div>
+                        <div class="user__prof">Верстальщик</div>
+                    </div>
+                </div>
+
+                <div class="nav">
+                    <a class="nav__link" href="#pho">Работы</a>
+                    <a class="nav__link" href="#abme">Обо мне</a>
+                    <a class="nav__link nav__link--btn" href="#"  data-modal="#modal_hire_me">Связаться со мной</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!------------------INTRO-------------->
+    <section class="intro">
+        <div class="container">
+
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <h2 class="intro__suptitle">Привет, меня зовут</h2>
+                    <h1 class="intro__title">Евгений Майков</h1>
+                    <div class="intro__text">Я Верстальщик</div>
+                    <div class="social">
+                        <a href="https://vk.com/id121991528" class="social__link" target="_blank"><img src="images/icon/vk.svg" alt=""
+                                width="40px"></a>
+                        <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Finstagram.com%2Feugene_maikov%3Figshid%3D1h6hwbycpe6t1" class="social__link" target="_blank"><img src="images/icon/inst.svg" alt=""
+                                width="40px"></a>
+                        <a href="https://msng.link/o/?89026864084=tg" class="social__link" target="_blank"><img
+                                src="images/icon/telegram.svg" alt="" width="40px"></a>
+                        <a href="https://msng.link/o/?89026864084=wa" class="social__link" target="_blank"><img
+                                src="images/icon/whatsapp.svg" alt="" width="40px"></a>
+                        <a href="https://msng.link/o/?89026864084=vi" class="social__link" target="_blank"><img
+                                src="images/icon/viber.svg" alt="" width="40px" target="_blank"></a>
+                    </div>
+
+                    <a href="#" class="btn" data-modal="#modal_hire_me">Связаться со мной</a>
+            
+
+
+
+                </div>
+
+                <img class="intro__photo" src="images/я_2.png" alt="" height="500px" width="200px">
+            </div>
+            <!--/.intro__inner-->
+
+        </div>
+        <!--/.container-->
+    </section>
+
+    <a href="#up" class="arrow__up">
+        <img src="images/up-arrow.png" width="50px" alt="">
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="works">
+        <div class="container">
+            <div class="works__title" id="pho">Портфолио</div>
+            <div class="works__nav">
+                <a href="#" class="works__nav-link" data-filter="all">Все</a>
+                <a href="#" class="works__nav-link" data-filter="app">Приложения</a>
+                <a href="#" class="works__nav-link" data-filter="website">Сайты</a>
+                <a href="#" class="works__nav-link" data-filter="reszta">Прочее</a>
+            </div>
+
+
+
+            
+            <div class="portfolio">
+                <div class="portfolio__col" data-cat="website" data-modal="#modal_project_1">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_1.2.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Active Box</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col" data-cat="website" data-modal="#modal_project_2">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_4.2.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Covid-19 Landing Page</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col" data-cat="website" data-modal="#modal_project_3">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_3.5.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Delivery Food</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col"data-cat="website" data-modal="#modal_project_4">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_2.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">MoGo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col"data-cat="website" data-modal="#modal_project_5">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_5.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Web development project</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col"data-cat="website" data-modal="#modal_project_6">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_6.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Портфолио веб-разработчика</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col"data-cat="app" data-modal="#modal_project_7">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_7.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: App</div>
+                            <div class="work__title">Приложение по доставке еды</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col"data-cat="website" data-modal="#modal_project_8">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_8.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Портфолио верстальщика</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="portfolio__col"data-cat="reszta">
+                    <div class="work">
+                        <img class="work__image" src="http://placehold.it/375x300" alt=""data-modal="#modal_project_9">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: reszta</div>
+                            <div class="work__title">Проектный заголовок</div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!--/.portfolio-->
+
+
+
+        </div>
+        <!--/.container-->
     </div>
+    <!--/.works-->
+
+
+
+
+
+
+
+
+    <!----------About----------->
+    <section class="about" id="abme">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__photo">
+                    <img class="img img-photo" src="images/Я_3.png" alt="">
+                </div>
+                <div class="about__content">
+                    <h3 class="about__title">Обо мне</h3>
+                    <h2 class="about__bigtitle">Кто я</h2>
+                    <div class="about__text">
+                        <p>Приветствую Вас на своем сайте-портфолио. Меня зовут Евгений.
+                             Живу в Нижнем-Новгороде. Основная 
+                             профессиональная деятельность — верстка HTML-сайтов. Создание
+                             качественных сайтов с использованием последних технологий. 
+                             </p>
+                        <p>Создание
+                            адаптивной
+                            верстки сайта с последующей
+                           качественной посадкой на популярную CMS систему WordPress. 
+                           Для автоматизации процесса верстки использую препроцессоры Less/Sass для 
+                           ускоренной стилизации 
+                           сайта и более гибкого кода</p>
+                        <p>Динамика сайта организуется собственным jQuery кодом или настроенными плагинами.
+                             В конце работы осуществляется
+                             проверка отображения верстки в различных браузерах на разных устройствах</p>
+                    </div>
+
+                    <a href="#" class="btn"  data-modal="#modal_hire_me">Связаться со мной</a>
+                </div>
+                <!--/.about__content-->
+            </div>
+            <!--/.about__inner-->
+        </div>
+        <!--/.container-->
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+<!----------Reviews----------->
+    <!-- <div class="reviews">
+        <div class="container">
+            <div class="reviews__item">
+                <div class="reviews__text"><p>Было очень приятно работать с Евгением. Задача
+                    была выполнена в кратчайшие сроки и на высоком уровне. Дал много нужных
+                    советов. Буду еще обращаться. Спасибо!
+                </p></div>
+                <div class="reviews__author"> -->
+                    <!-- <img class="reviews__photo" src="images/icon/str/2.png" alt=""> -->
+                    <!-- <div class="reviews__name">Татьяна И.</div>
+                    <div class="reviews__company">Заказчик</div>
+                    <div class="reviews__rating">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                    </div>
+                </div> -->
+            <!--</div>/.reviews__item-->
+            <!-- <div class="reviews__item">
+                <div class="reviews__text"><p>Замечательный, отзывчивый, культурный,
+                    толерантный, отработавший на все 300 процентов исполнитель. Всем
+                    советую!
+                </p></div>
+                <div class="reviews__author"> -->
+                    <!-- <img class="reviews__photo" src="images/icon/str/2.png" alt=""> -->
+                    <!-- <div class="reviews__name">Семен Ф.</div>
+                    <div class="reviews__company">Заказчик</div>
+                    <div class="reviews__rating">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                        <img class="reviews__star" src="images/icon/black-star-silhouette.svg" width="13px" alt="">
+                    </div>
+                </div> -->
+            <!--</div>/.reviews__item-->
+        <!--</div>/.container-->
+    <!--</div>/.reviews-->
     
 
 
 
-    <!-- -------Portfolio------ -->
-    <!-- ---------------------- -->
-    <div class="portfolio" id="pf">
+
+
+
+    <section class="arguments">
         <div class="container">
-
-            <div class="title">
-                Портфолио
+            <div class="arg__header">
+                <div class="arg__title">Плюсы HTML-верстки</div>
+                <div class="arg__text">Верстальщик делает свою верстку на основе 
+                дизайнерского макета сайта. HTML-верстка позволяет более гибко
+                 работать с макетом и поможет выполнить даже самые смелые решения.</div>
             </div>
-            <div class="row__l__R">
-                <div class="row row__left">
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/11.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="portfolio/ActiveBox/index.html">Макет Active Box</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка одностраничного сайта по PSD макету.</p></div>
-                        </div>
-                    </div>
-                        
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/22.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="portfolio/MoGo/index.html">Макет MoGo</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка лендинга условной компании. Мобильная адаптивность.</p></div>
-                        </div>    
-                    </div>
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/33.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="portfolio/DeliveryFood/index.html">Макет Delivery Food</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка онлайн сервиса для доставки еды</p></div>
-                        </div>
-                    </div>
-                </div><!--/.row-->
-                <div class="row row__right">
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/44.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="portfolio/Covid-19/index.html">Макет Covid-19</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка информационного онлайн сервиса </p></div>
-                        </div>
-                    </div>
-                        
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/55.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="portfolio/Mobile/index.html">Макет приложения</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка под мобильное приложение Delivery Food</p></div>
-                        </div>    
-                    </div>
-                    <div class="col-4 col-4__shadow">
-                        <div class="portfolio__item">
-                            <div class="portfolio-tem__img"><img src="img/porftolio/66.png" alt="Макет Active Box"></div>
-                            <div class="portfolio-tem__title"><a href="#">Макет портфолио</a></div>
-                            <div class="portfolio-tem__text"><p>Верстка портфолио для демонстрации личных навыков</p></div>
-                        </div>
-                    </div>
-                </div><!--/.row-->
-            </div><!--/.row__l__R-->
-            
-            
 
+            <div class="arguments__inner">
+                <div class="arguments__col">
+                    <div class="arguments__item">
+                        <img class="arguments__img" src="images/arguments/2.png" alt="">
+                        <div class="arguments__content">
+                            <h3 class="arguments__title">АДАПТИВНАЯ ВЕРСТКА</h3>
+                            <div class="arguments__text">Cайт будет подстраиваться под все
+                                разрешения с каких устройств к вам бы не зашел 
+                                пользователь.</div>
+                        </div>    
+                    </div>
+                </div><!--/.arguments__col-->
+                <div class="arguments__col">
+                    <div class="arguments__item">
+                        <img class="arguments__img" src="images/arguments/3.png" alt="">
+                        <div class="arguments__content">
+                            <h3 class="arguments__title">КРОССБРАУЗЕРНАЯ ВЕРСТКА</h3>
+                            <div class="arguments__text">Чтобы ваш сайт одинаково
+                                 красиво выглядел в разных браузерах.</div>
+                        </div>    
+                    </div>
+                </div><!--/.arguments__col-->
+                <div class="arguments__col">
+                    <div class="arguments__item">
+                        <img class="arguments__img" src="images/arguments/5.png" alt="">
+                        <div class="arguments__content">
+                            <h3 class="arguments__title">СЕМАНТИЧЕСКАЯ ВЕРСТКА</h3>
+                            <div class="arguments__text">Данный тип верстки позволяет 
+                                логически помечать веб-страницу, помогая поисковикам лучше понимать её.</div>
+                        </div>    
+                    </div>
+                </div><!--/.arguments__col-->
+                <div class="arguments__col">
+                    <div class="arguments__item">
+                        <img class="arguments__img" src="images/arguments/6.png" alt="">
+                        <div class="arguments__content">
+                            <h3 class="arguments__title">ВАЛИДНАЯ ВЕРСТКА</h3>
+                            <div class="arguments__text">Это HTML код, который проходит
+                                 валидацию (проверку) по стандартам консорциума W3C.</div>
+                        </div>    
+                    </div>
+                </div><!--/.arguments__col-->
+            </div><!--/.arguments__inner-->
         </div><!--/.container-->
-    </div><!--/.portfolio-->
+    </section><!--/.arguments-->
 
 
 
 
 
 
-
-    <!-- -------Arguments------ -->
-    <!-- ---------------------- -->
-    <div class="arguments section--arguments">
+    <div class="technologies">
         <div class="container">
-
-            <div class="title color__white">Плюсы HTML-верстки</div>
-            <div class="arguments__suptitle color__white">
-                Верстальщик делает свою
-                верстку на основе дизайнерского макета сайта. HTML-верстка позволяет более гибко работать с макетом и
-                поможет
-                выполнить даже самые смелые решения.</div>
-            <div class="row__l__R">
-                <div class="row row__left">
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img" src="img/arguments/1.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">ФИКСИРОВАННАЯ ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>Cайт отображается абсолютно одинаково
-                                на всех устройствах, не зависимо от разрешения.</p></div>
-                        </div>
-                    </div>
-                        
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img" src="img/arguments/2.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">АДАПТИВНАЯ ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>Cайт будет подстраиваться под все
-                                разрешения с каких устройств к вам бы не зашел пользователь.</p></div>
-                        </div>    
-                    </div>
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img" src="img/arguments/3.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">КРОССБРАУЗЕРНАЯ ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>Чтобы ваш сайт
-                                одинаково красиво выглядел в разных браузерах.</p></div>
-                        </div>
-                    </div>
-                </div><!--/.row-->
-                <div class="row row__right">
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img element1" src="img/arguments/4.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">FLEX ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>При гибкой верстке с помощью CSS свойств Flex, стало значительно
-                                легче создавать удобные и адаптивные страницы.</p></div>
-                        </div>
-                    </div>
-                        
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img" src="img/arguments/5.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">СЕМАНТИЧЕСКАЯ ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>Данный тип верстки позволяет логически помечать веб-страницу,
-                                помогая поисковикам лучше
-                                понимать её.</p></div>
-                        </div>    
-                    </div>
-                    <div class="col-4 bg__white">
-                        <div class="arguments__item">
-                            <img class="arguments-tem__img" src="img/arguments/6.png" alt="">
-                            <div class="arguments-tem__title"><a href="#">ВАЛИДНАЯ ВЕРСТКА</a></div>
-                            <div class="arguments-tem__text"><p>Это HTML код, который проходит валидацию (проверку) по стандартам
-                                консорциума W3C.</p></div>
-                        </div>
-                    </div>
-                </div><!--/.row-->
+            <div class="tlg__header">
+                <div class="tlg__title">КАКИМИ ТЕХНОЛОГИЯМИ Я ВЛАДЕЮ</div>
             </div>
-            
-            
+            <div class="technologies__inner">
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/html5.png" alt="" width="80px">
+                            <div class="technologies__title">HTML5 и CSS3</div>
+                            <div class="technologies__text">Я создаю семантическую
+                             и адаптивную верстку, при помощи последних разработок
+                              в HTML и CSS.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/wordpress.png" alt="" width="80px">
+                            <div class="technologies__title">WORDPRESS</div>
+                            <div class="technologies__text">Я работал с различными
+                                 CMS системами, занимался "натяжкой" верстки на
+                                  Wordpress.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/bootstrap.png" alt="" width="80px">
+                            <div class="technologies__title">BOOTSTRAP</div>
+                            <div class="technologies__text">Я использую популярный
+                                 фреймворк, чтобы упростить дальнейшее развития
+                                  проекта в будущем.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/sass.png" alt="" width="80px">
+                            <div class="technologies__title">LESS и SASS</div>
+                            <div class="technologies__text">Я использую препроцессоры,
+                                 дабы ускорить разработку сайтов.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/illustrator.png" alt="" width="80px">
+                            <div class="technologies__title">ILLUSTRATOR</div>
+                            <div class="technologies__text">Редактор для создания
+                                 векторных изображений и иллюстраций
+                                  различной сложности</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/photoshop.png" alt="" width="80px">
+                            <div class="technologies__title">PHOTOSHOP</div>
+                            <div class="technologies__text">Самый популярный
+                                 и универсальный редактор изображений. </div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/git.png" alt="" width="80px">
+                            <div class="technologies__title">GIT</div>
+                            <div class="technologies__text">Я работаю с репозиториями
+                                через систему контроля версий Git.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/js.png" alt="" width="80px">
+                            <div class="technologies__title">JavaScript</div>
+                            <div class="technologies__text">Используется для добавления 
+                                интерактива на веб-страницу, универсальный язык
+                                 программирования.
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+                <div class="technologies__col">
+                    <div class="technologies__item">
+                        <div class="technologies__content">
+                            <img src="images/tlg/darts.png" alt="" width="80px">
+                            <div class="technologies__title">PIXEL PERFECT</div>
+                            <div class="technologies__text">Ваш готовый сайт будет
+                                 выглядеть также как на дизайнерском макете,
+                                  когда я его сверстаю.</div>
+                        </div>
+                    </div>
+                </div><!--/.technologies__col-->
+            </div><!--/.technologies__inner-->
         </div><!--/.container-->
-    </div><!--/.portfolio-->
+    </div><!--/.container-->
 
 
 
 
-
-
-
-    <!-- -------Footer--------- -->
-<div class="footer">
-    <div class="container">
-        <div class="row footer__col">
-            <div class="col-4 footen__1coll">
-                <p class="footer__name">&#169 2020 Евгений Майков</p>
-                <p> HTML верстка и разработка сайтов</p>
+    <div class="strength">
+        <div class="container">
+            <div class="str__header">
+                <div class="str__title">МОИ СИЛЬНЫЕ СТОРОНЫ</div>
             </div>
-            <div class="col-4 footen__1coll">
-                <p class="footer__social">Мои профили в социальных сетях:</p>
-                <p class="footer__social-icons">
-                    <a class="social__item" href="https://vk.com/eugene_maikov" target="blank">
-                        <svg>
-                            <use xlink:href="#vk"></use>
-                        </svg>
-                    </a>
-                    <a class="social__item" href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Finstagram.com%2Feugene_maikov%3Figshid%3D1h6hwbycpe6t1" target="blank">
-                        <svg>
-                            <use xlink:href="#inst"></use>
-                        </svg>
-                    </a>
-                </p>
-            </div>
-            <div class="col-4 footen__1coll">
-                <div><a href="https://vk.com/im?peers=351788119_c238&sel=121991528" class="button" target="_blank">связаться ВКОНТАКТЕ</a></div>
-                <p>Напишите мне, чтобы заказать или узнать стоимость верстки вашего
-                    проекта</p>
-            </div>
-        </div>
+            <div class="strength__inner">
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/1.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">ОТВЕТСТВЕННЫЙ</div>
+                            <div class="strength__text">Ответственно подхожу к работе,
+                                  делаю как можно лучше, используя весь свой
+                                  арсенал знаний.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/2.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">ВСЁ ВРЕМЯ НА СВЯЗИ</div>
+                            <div class="strength__text">Отвечаю в течении минуты в
+                                 рабочее время, никогда не пропадаю без 
+                                 уважительной причины.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/3.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">БЫСТРО УЧУСЬ</div>
+                            <div class="strength__text">Быстро вхожу в курс дел,
+                                 легко обучаюсь новым технологиям, 
+                                всегда рад изучить что-то новое.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/4.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">ПРОЯВЛЯЮ ИНИЦИАТИВУ</div>
+                            <div class="strength__text">Я инициативный человек, 
+                                у которого как правило несколько
+                                 решений одних и тех же задач.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/5.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">СОБЛЮДАЮ СРОКИ</div>
+                            <div class="strength__text">Я всегда стараюсь максимально
+                                 точно оценивать сроки работ,
+                                 чтобы не подводить моих коллег.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+                <div class="strength__col">
+                    <div class="strength__item">
+                        <div class="strength__image">
+                             <img class="strength__img" src="images/icon/str/6.png" alt="">
+                        </div>
+                        <div class="strength__content">
+                            <div class="strength__title">ИМЕЮ ОПЫТ РАБОТЫ</div>
+                            <div class="strength__text">Благодаря моему немалому опыту,
+                                 мои заказчики получают то - на что они рассчитывали.</div>
+                        </div>
+                    </div>
+                </div><!--/.strength__col-->
+            </div><!--/.strength__inner-->
+        </div><!--/.container-->
+    </div><!--/.strength-->
 
-    </div>
-
-</div>
 
 
 
 
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__credits">
+                    <div class="footer__copyright">
+                        &copy; 2020 Евгений Майков
+                    </div>
+                    <div class="footer__social">
+                        <a href="https://vk.com/eugene_maikov" target="_blank"><img src="images/icon/icons__footer/vk (3).svg" height="30" alt=""></a>
+                        <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Finstagram.com%2Feugene_maikov%3Figshid%3D1h6hwbycpe6t1" target="_blank"><img src="images/icon/icons__footer/instagram (2).svg" width="24" alt=""></a>
+                        <a href="#" target="_blank"><img src="images/icon/icons__footer/telegram (1).svg" width="24" alt="" target="_blank"></a>
+                        <a href="#" target="_blank"><img src="images/icon/icons__footer/whatsapp (1).svg" width="24" alt="" target="_blank"></a>
+                        <a href="#" target="_blank"><img src="images/icon/icons__footer/viber (1).svg" width="24" alt="" target="_blank"></a>
+                    </div>
+                </div><!--/.footer__credits-->
+                <div class="footer__nav">
+                    <a href="#pho" class="footer__nav-link">Работы</a>
+                    <a href="#abme" class="footer__nav-link">Обо мне</a>
+                    <a href="#" class="footer__nav-link footer__nav-link--btn"  data-modal="#modal_hire_me">Связаться со мной</a>
+                </div>
+            </div><!--/.footer__inner-->
+        </div><!--/.container-->
+    </footer>
 
+
+
+
+
+
+
+
+
+
+
+<!-- Модальные окна -->
+    <div class="modal" id="modal_project_1">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/porftolio/Превью_1.2.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/porftolio/Превью_1.4.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/porftolio/Превью_1.3.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Active Box</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Данный шаблон представляет
+                             собой лэндинговую страницу
+                              в современном чистом 
+                              минималистичном стиле, адаптированную 
+                              под мобильные устройства и планшеты.</p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_2">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_4.2.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_2.2.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">COVID-19 LANDING PAGE</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Элегантный и чистый дизайн
+                             целевой страницы. Чтобы
+                              повысить осведомленность
+                               о коронном вирусе.
+                                Пожалуйста, оставайся 
+                                дома, будь в безопасности.</p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_3">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_3.5.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_3.2.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">DELIVERY FOOD</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Простой «аппетитный» шаблон
+                             без излишеств в дизайне, но
+                              с отличной возможностью 
+                              продемонстрировать товар 
+                              и вызвать желание его заказать.</p>
+                    </div>
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_4">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_2.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_2.2.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Мого</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2019
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>MoGo – шаблон, выполненный в
+                            современном чистом дизайне.
+                             Отлично подойдет для агентств
+                              и компаний. Включает в себя
+                               следующие блоки: главная, 
+                               услуги, работы, блог, 
+                               контакты.</p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_5">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_5.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_5.2.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">WEB DEVELOPMENT PROJECT</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>  Лэндинговая страница выполнена 
+                            в современном чистом стиле, 
+                            отлично подойдет для демонстрации
+                             и продвижения вашего портфолио в
+                              сети Интернет.
+                            Страница имеет 9 блоков: о компании, 
+                                 направления деятельности, портфолио, 
+                                 наша команда, этапы работ, цены, отзывы,
+                                  блог, контакты.</p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_6">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_6.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_6.2.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Портфолио веб-разработчика</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Стильное и простое портфолио для верстальщика, легкий
+                        не навязчивый дизайн в приятных темных и светлых тонах. 
+                        Подойдет для демонстрации работ как фотографа, так веб-разработчика
+                        </p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_7">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_7.png" width="790px" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="https:/placehold.it/790x700/333" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">DELIVERY FOOD(Mobile)</h3>  
+                        <div class="modal-work__info">
+                            app <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Верстка мобильного приложения по доставке 
+                            еды
+                        </p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_8">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo"
+                             src="images/porftolio/Превью_8.png" width="790px" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Портфолио верстальщика</h3>  
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2020
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Еще один стильный шаблон портфолио. Выполненый,
+                            на этот раз, в светлом стиле. Приятное и удачное сочетание 
+                            блоков. Подойдет для демонстрации работ веб-разработчика
+                        </p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+    <div class="modal" id="modal_project_9">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="https:/placehold.it/790x700" alt="">  
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="https:/placehold.it/790x700/333" alt="">  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Проект name</h3>  
+                        <div class="modal-work__info">
+                            Категория <span class="modal-work__info-diviter">|</span> 2019
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet
+                         consectetur adipisicing
+                          elit. Molestias cum ipsam,
+                          quod facere reprehenderit
+                          fugiat nisi natus laborum sequi!
+                          Tempore fugiat exercitationem
+                          esse! Laboriosam soluta sequi
+                         velit asperiores. Iste, explicabo?</p>
+                         <p>Lorem ipsum dolor sit amet
+                         consectetur adipisicing
+                         elit. Molestias cum ipsam,
+                          quod facere reprehenderit
+                         fugiat nisi natus laborum sequi!
+                         Tempore fugiat exercitationem
+                         esse! Laboriosam soluta sequi
+                        velit asperiores. Iste, explicabo?</p>
+                    </div> 
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div><!--/.modal-work__content-->
+            </div><!--/.modal-work-->
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+
+
+
+
+    <div class="modal" id="modal_hire_me">
+        <div class="modal__dialog modal__dialog--sm">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+            
+            <div class="contact">
+                <div class="contact__left">
+                    <h3 class="modal__title mb-0">Давайте поговорим!</h3>
+                    <h4 class="modal__suptitle">позвоните мне или отправьте запрос</h4>
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+                            <img src="images/modal-contact/phone-call.svg" width="35px" alt="">
+                            8(902)686-40-84
+                        </li>
+                        <li class="contact__info-item">
+                            <img src="images/modal-contact/mail.svg" width="35px" alt="">
+                            eugene-maikov2000@yandex.ru
+                        </li>
+                    </ul>
+
+                    <form class="form" action="/" method="POST">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Адрес почты</label>
+                            <input class="form__input" name="input-email" type="text" id="input-email"
+                            placeholder="Электронная почта">
+                        </div> 
+                        <div class="form__group">
+                            <label class="form__label" for="input-text">Запрос</label>
+                            <textarea class="form__textarea" name="input-text" id="input-text"
+                            placeholder="Ваш запрос"></textarea>
+                        </div> 
+                        <div class="text-right">
+                            <button class="btn btn-h-mini" type="submit">Отправить</button>
+                        </div>
+                    </form>
+
+                </div><!--/.contact__left-->
+                <div class="contact__right">
+                    <img class="img" src="images/modal-contact/call.jpg" alt="">
+                </div><!--/.contact__right-->
+            </div><!--/.contact-->
+            
+            
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+
+
+
+
+    <!--================ JS==================== -->
+    <script src="js//slick.min.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,63 @@
+// main: ../style.less
+
+.technologies{
+    padding-bottom: 7rem;
+    margin-top: 7rem;
+    padding-top: 7rem;
+
+    background: #332F30 url("../images/bg4.jpg") 
+    center no-repeat;
+    background-size: cover;
+}
+.tlg__header{
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.tlg__title{
+    margin-bottom: 0.6rem;
+    position: relative;
+
+    font-size: 3rem;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: 700;   
+}
+.technologies__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+.technologies__col{
+    flex-basis: 33.33333%;
+}
+.technologies__item{
+    background-color: @white;
+    height: 330px;
+    text-align: center;
+
+    border: #332F30 3px solid;
+
+    transition: background .2s linear,
+    border .2s linear;
+
+    &:hover{
+        // background:  #332F30;
+        border: #332F30 7px solid;
+        // color: @white;
+
+        
+    }
+
+}
+.technologies__content{
+    padding: 4rem 2rem;
+}
+.technologies__title{
+    margin-top: 1.5rem;
+
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.technologies__text{
+    margin-top: 0.6rem;
+}
