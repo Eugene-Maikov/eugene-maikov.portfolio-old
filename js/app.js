@@ -120,4 +120,19 @@ worksSlider.slick({ //ID нашего элемента слайдера
     currentSlider.slick("slickNext");//Слайдер переключаем вперед
   });
 
+
+
+// ============= Mobile nav ================
+
+
+    const navToggle = $("#navToggle");
+    const nav = $("#nav");
+
+    navToggle.on("click", function(event) {
+        event.preventDefault();
+
+        nav.toggleClass("show")
+    });
+
+
 });
