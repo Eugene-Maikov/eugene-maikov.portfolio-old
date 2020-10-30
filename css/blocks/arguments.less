@@ -16,11 +16,23 @@
     color: @black;
     text-transform: uppercase;
     font-weight: 700;
+
+    @media @tablet{
+        font-size: 2.5rem;
+    }
+    @media @mobile-sm{
+        font-size: 2.2rem;
+    }
+    
 }
 .arg__text{
     font-size: 1.2rem;
     color: @gray;
     font-weight: 300;
+
+    @media @mobile-sm{
+        font-size: 1rem;
+    }
 }
 
 .arguments__inner{
@@ -32,7 +44,15 @@
     flex-basis: 25%;
     padding: 1rem;
 
-    
+    @media @notebook{
+        flex-basis: 50%;
+    }  
+    @media @mobile-sm{
+        flex-basis: 100%;;
+    }
+    // @media @tablet{
+    //     flex-basis: 50%;
+    // }    
 }
 .arguments__item{
     background-color: fade(@black, 10%);
@@ -40,13 +60,17 @@
     text-align: center;
     box-shadow: 0 0 4px fade(#000, 25%);
 
-    transition: box-shadow .2s linear;
+    transition: box-shadow .2s linear; 
 }
 .arguments__img{
     padding-top: 1.5rem;
 
     width: 70px;
     height: auto;
+
+    @media @notebook{
+        padding-top: 10%;
+    }
 }
 .arguments__content{
     padding: 1rem 2rem;
