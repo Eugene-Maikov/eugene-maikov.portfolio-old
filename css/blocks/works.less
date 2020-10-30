@@ -2,6 +2,10 @@
 
 .works{
     padding: 2.8rem 0;
+
+    @media @mobile-ltl{
+        margin-bottom: -130px;
+    }
 }
 .works__nav{
     display: flex;
@@ -19,6 +23,14 @@
     &:hover{
         color: @black;
     }
+    @media @mobile-sm {
+        font-size: 1rem;
+        margin: 0 .5rem;
+    }
+    @media @mobile-ltl{
+        font-size: 1rem;
+        margin: 0 .3rem;
+    }
 }
 .works__title{
     padding: 1rem 0 3rem 0;
@@ -28,6 +40,10 @@
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
+
+    @media @mobile-sm {
+        font-size: 2.5rem;
+    }
 }
 
 
