@@ -2,7 +2,6 @@
 
 .nav{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     height: 100%;
 
@@ -32,12 +31,14 @@
     margin-left: 2rem;
     position: relative;
 
-    font-size: 0.93rem;
+    font-size: 1.5rem;
     color: @black;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
 
+    @media @tablet {
+        margin-left: 1rem;
+    }
 
     &:after{
         content: "";
@@ -71,11 +72,5 @@
             background-color: @black;
             color: @white;
         }
-    }
-    
-    @media @mobile {
-        width: 100%;
-        margin-left: 0;
-        padding: 0.5rem 1rem;
     }
 }

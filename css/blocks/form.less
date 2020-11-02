@@ -1,10 +1,26 @@
 // main: ../style.less
-
+.form{
+    text-align: center; 
+}
 .form__group{
-    margin-bottom: 1.8rem;
+    width: 100%;
+    padding: 0 3rem;
+    text-align: left;
+    margin-bottom: 1.4rem;
 
     &:last-child{
         margin-bottom: 0;
+    }
+
+    @media @mobile {
+        padding: 0;
+    }
+    // @media @mobile-sm {
+    //     padding: 0 3rem;
+    // }
+    @media @mobile-sm {
+        padding: 0 1rem;
+        margin-bottom: 1.1rem;
     }
 }
 .form__label{
@@ -18,11 +34,11 @@
 .form__input,
 .form__textarea{
     display: block;
-    width: 100%;
-    padding: 1.3rem 1.8rem;
+    width: 450px;
+    padding: 1.2rem 1.8rem;
 
     border: 1px solid fade(#707070, 40%);
-    border-radius: 1.8rem;
+    border-radius: 2px;
 
     font-family: inherit;
     font-size: 0.8rem;
@@ -30,6 +46,18 @@
     line-height: 1.2;
     color: @black;
 
+    @media @mobile {
+        width: 400px;
+    }
+    @media @mobile-sm {
+        width: 250px;
+        padding: .7rem 1.4rem;
+    }
+    @media @mobile-ltl {
+        width: 220px;
+        padding: .7rem 1.4rem;
+    }
+    
     &:focus{
         outline: none;
         border-color: rgb(88, 155, 218);

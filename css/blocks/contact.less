@@ -1,43 +1,157 @@
 // main: ../style.less
 
 .contact{
-    display: flex;
-
-    @media @mobile{
-        display: block;
-    }
+    margin-top: 2rem;
+    margin-bottom: 6rem;
 }
-.contact__left{
-    width: 47%;
-    padding: 2rem;
+.ctc__header{
+    margin-bottom: 3.6rem;
+    text-align: center;
+}
+.ctc__title{
+    margin-bottom: 0.6rem;
     
-    @media @mobile{
-        width: 100%;
-    }
-    @media @mobile-ltl{
-        padding: 1rem;
+    font-size: 3rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;  
+    
+    @media @mobile {
+        font-size: 2rem;
     }
 }
-.contact__right{
-    width: 53%;
+.ctc__title-opacity{
+    font-size: 5rem;
+    color: fade(@black, 0);
+}
+.ctc__suptitle{
+    margin-bottom: 0.6rem;
+    
+    font-size: 1.6rem;
+    color: @black;
+    font-weight: 400; 
 
-    @media @mobile{
-        width: 100%;
+    @media @mobile {
+        font-size: 1rem;
+    }
+}
+.contact__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+.contact__col{
+    flex-basis: 50%;
+
+    @media @tablet {
+        flex-basis: 100%;
+    }
+}
+.contact__item-center{
+    @media @tablet {
+        display: flex;
+        justify-content: center;
     }
 }
 .contact__info{
-    margin: 1.3rem 1rem 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media @mobile-sm{
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+}
+
+.contact__info-social{
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: top;
+
+    text-decoration: none;
+    color: @black;
+}
+.con__social{
+    border-radius: 10%;
+}
+.con__social{
+    width: 60px;
+}
+.con__a{
+    display: flex;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: @black;
+ 
+
+    @media @mobile-sm{
+        flex-basis: 100%;
+    }
+}
+.contact__title{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+
+    @media @tablet{
+        padding-top: 2rem;
+    }
+    @media @mobile-sm{
+        font-size: 2rem;
+    }
+}
+.contact__suptitle{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    @media @mobile-sm{
+        font-size: 1.1rem;
+    }
+}
+.con__social-about{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.contact__item-p-r{
+    padding: 0 2rem;
+    
+    @media @tablet{
+        padding: 0 8rem;
+    }
+    @media @mobile{
+        padding: 0 2rem;
+    }
+}
+
+
+// Телефон и почта-------------------
+//----------------------------------
+
+.contact__info-second{
+    margin: 3rem 1rem 3.5rem;
     padding: 0;
     list-style: none;
 
-    font-size: 1em;
+    font-size: 2em;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     color: @black;
     font-weight: 300;
+
+    @media @mobile-sm{
+        font-size: 1rem;
+    }
 }
 .contact__info-item{
     display: flex;
     align-items: center;
     margin-bottom: .35rem;
+
 
     &:last-child{
         margin-bottom: 0;
@@ -45,29 +159,20 @@
 }
 .contact__info-item img{
     padding-right: 1rem;
+    opacity: 2;
 }
+.cont__img{
+    width: 45px;
 
-.modal__title{
-    margin-bottom: 3.6rem;
-
-    font-size: 2.6rem;
-    text-transform: uppercase;
-    color: @black;
-    font-weight: 700;
-    line-height: 1.1;
-
-    @media @mobile{
-        font-size: 2rem;
-    }
     @media @mobile-sm{
-        font-size: 1.7rem;
+        width: 35px;
     }
 }
-.modal__suptitle{
-    padding-top: 0.5rem;
-    
-    text-transform: uppercase;
-    font-size: 1.06rem;
+.contact__tel{
+    text-decoration: none;
     color: @black;
-    font-weight: 400;
+}
+.contact__mail{
+    text-decoration: none;
+    color: @black;
 }

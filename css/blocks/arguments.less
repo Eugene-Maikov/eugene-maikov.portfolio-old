@@ -1,83 +1,103 @@
 // main: ../style.less
 
-.arguments{
-    margin-bottom: 10rem;
-    margin-top: 14rem;
-}
 .arg__header{
     margin-bottom: 3.6rem;
-    
     text-align: center;
 }
 .arg__title{
+    margin-top: 3rem;
     margin-bottom: 0.6rem;
-
-    font-size: 3rem;
+    
+    font-size: 2.8rem;
     color: @black;
     text-transform: uppercase;
-    font-weight: 700;
-
-    @media @tablet{
-        font-size: 2.5rem;
+    font-weight: 600;   
+    
+    @media @mobile {
+        margin-bottom: -2rem;
+        font-size: 2.1rem;
     }
-    @media @mobile-sm{
-        font-size: 2.2rem;
+    @media @mobile-sm {
+        margin-bottom: -2.5rem;
+        font-size: 2.1rem;
     }
     @media @mobile-ltl {
-        font-size: 1.9rem;
+        margin-bottom: -3rem;
+        font-size: 2.1rem;
     }
+}
+.arguments__title{
+    margin-top: 3rem;
+    margin-bottom: 0.6rem;
     
-}
-.arg__text{
-    font-size: 1.2rem;
-    color: @gray;
-    font-weight: 300;
+    font-size: 2.5rem;
+    color: @black;
+    font-weight: 600;
 
-    @media @mobile-sm{
-        font-size: 1rem;
+    @media @notebook {
+        margin-left: 3rem;
+        font-size: 2.4rem;
+    }
+    @media @mobile {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    @media @mobile-sm {
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+        font-size: 1.5rem;
     }
 }
-
 .arguments__inner{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1rem;
-}
-.arguments__col{
-    flex-basis: 25%;
-    padding: 1rem;
 
-    @media @notebook{
-        flex-basis: 50%;
-    }  
-    @media @mobile-sm{
-        flex-basis: 100%;;
+    @media @mobile {
+        flex-wrap: wrap;
     }
-    // @media @tablet{
-    //     flex-basis: 50%;
-    // }    
 }
-.arguments__item{
-    background-color: fade(@black, 10%);
-    min-height: 280px;
-    text-align: center;
-    box-shadow: 0 0 4px fade(#000, 25%);
+.arguments__item-column{
+    margin-left: 3rem;
 
-    transition: box-shadow .2s linear; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media @mobile {
+        width: 100%;
+        margin: 0;
+        padding: 3rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media @mobile-sm {
+        padding: 2rem 1rem;
+    }
 }
 .arguments__img{
-    padding-top: 1.5rem;
+    width: 140px;
 
-    width: 70px;
-    height: auto;
-
-    @media @notebook{
-        padding-top: 10%;
+    @media @mobile-sm {
+        width: 90px;
+    }
+    @media @mobile-ltl {
+        width: 80px;
     }
 }
-.arguments__content{
-    padding: 1rem 2rem;
-}
-.arguments__text{
-    margin-top: 0.6rem;
+ul{
+    font-size: 2rem;
+    color: @black;
+
+    font-weight: 400;
+
+    @media @notebook {
+        margin-left: 3rem;
+        font-size: 1.6rem;
+    }
+    @media @mobile {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+    @media @mobile-sm {
+        font-size: 1rem;
+    }
 }
