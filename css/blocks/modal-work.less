@@ -1,0 +1,125 @@
+// main: ../style.less
+
+.modal-work{
+    display: flex;
+    min-height: 630px;
+
+    @media @notebook {
+        display: block;
+    }
+}
+.modal-work__preview{
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+
+    @media @notebook {
+        width: 100%;
+        position: static;
+    }
+}
+.modal-work__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+
+    @media @notebook {
+        width: 100%;
+        position: static;
+        transform: none;
+    }
+}
+.modal-work__content{
+    position: relative;
+    width: 35%;
+    padding: 3.4rem 2rem 1rem 1.73rem;
+    
+    @media @notebook {
+        width: 100%;
+        position: static;
+    }
+    @media @tablet {
+        padding: 1rem 2rem 1rem 1.73rem;
+    }
+}
+.modal-work__header{
+    margin-bottom: 2.2rem; 
+
+    @media @notebook {
+        margin-bottom: 1.5rem; 
+    }
+}
+.modal-work__title{
+    font-size: 2.13rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media @notebook {
+        line-height: 1.5;
+    }
+    @media @tablet {
+        font-size: 1.7rem;
+    }
+    @media @mobile-sm {
+        font-size: 1.5rem;
+    }
+}
+.modal-work__info{
+    font-size: 1.2rem;
+    color: @gray;
+    text-transform: uppercase;
+}
+.modal-work__info-diviter{
+margin: 0 1rem;
+}
+.modal-work__text{
+    font-size: 1rem;
+    color: @gray;
+    line-height: 2;
+    font-weight: 300;
+
+    @media @tablet {
+        font-size: .9rem;
+    }
+}
+.modal-work__footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.8rem 1rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1; 
+
+    @media @tablet {
+        display: none;
+    }
+}
+.modal-work__btn{
+    padding: 0;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 0.94rem;
+    color: @black;
+    text-transform: uppercase;
+
+    &:focus{
+        outline: none;
+        border-color: rgb(88, 155, 218);
+    }
+
+    &:hover{
+        color: @black;
+        font-weight: 700;
+    }
+}

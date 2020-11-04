@@ -1,40 +1,26 @@
 // main: ../style.less
 
 .btn{
-    margin-right: 4rem;
-
     display: inline-block;
     vertical-align: top;
     padding: 1.05em 1.7em;
     min-width: 170px;
 
-    border: 2px solid @black;
-    border-radius: 5px;
+    border: 1px solid @gray;
+    border-radius: 1.8em;
     background: none;
     cursor: pointer;
 
     font-family: inherit;
     line-height: 1.1;
     font-size: 1.06rem;
-    background-color: rgb(61, 61, 61);
-    color: @white;
-    font-weight: 600;
+    color: @black;
     text-transform: uppercase;
     text-decoration: none;
 
     transition: background-color .2s linear, 
     color .2s linear, 
     box-shadow .2s linear;
-
-    @media @tablet {
-        margin-right: 0;
-    }
-    @media @mobile-sm {
-        padding: .9em 1.5em;
-    }
-    @media @mobile-ltl {
-        padding: .7rem 1.4rem;
-    }
 
     &:focus{
         outline: none;
@@ -59,4 +45,14 @@
         border-width: 2px;
     }
 
+    @media @tablet {
+        font-size: 1rem;
+        padding: 1em 1.5em;
+        min-width: 140px;
+    }
 }
+
+
+
+
+

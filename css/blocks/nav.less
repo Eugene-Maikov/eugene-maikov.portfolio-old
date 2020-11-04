@@ -2,15 +2,13 @@
 
 .nav{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     height: 100%;
-    
 
     @media @mobile{
         height: auto;
-        padding: 1rem;
-
-        flex-direction: column;
+        padding: 2rem;
 
         position: absolute;
         top: 100%;
@@ -34,18 +32,12 @@
     margin-left: 2rem;
     position: relative;
 
-    font-size: 1.5rem;
+    font-size: 0.93rem;
     color: @black;
-    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 700;
     text-decoration: none;
 
-    @media @tablet {
-        margin-left: 1rem;
-    }
-    @media @mobile{
-        padding-top: 1rem;
-        margin-left: 0;
-    }
 
     &:after{
         content: "";
@@ -79,5 +71,11 @@
             background-color: @black;
             color: @white;
         }
+    }
+    
+    @media @mobile {
+        width: 100%;
+        margin-left: 0;
+        padding: 0.5rem 1rem;
     }
 }

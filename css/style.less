@@ -8,8 +8,7 @@ html{
 }
 body {
     margin: 0;
-    // font-family: 'Montserrat', sans-serif;
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: @black;
 
@@ -20,6 +19,13 @@ body {
 
 p{
     margin: 0 0 1rem;
+
+    @media @notebook {
+        margin: 0 0 2rem;
+    }
+    @media @mobile {
+        margin: 0;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     bottom: 10%;
     left: 50px;
+
+    @media @tablet {
+        display: none;
+    }
 }
 
 *,
@@ -36,21 +46,32 @@ h1, h2, h3, h4, h5, h6 {
 *::after{
     box-sizing: border-box;
 }
+// Block------------
+@import "vendor/slick"; 
 
 // Block------------
-@import "blocks/container";
-@import "blocks/header";
+@import "blocks/container"; 
+@import "blocks/header"; 
+@import "blocks/user"; 
+@import "blocks/nav"; 
 @import "blocks/intro";
-@import "blocks/nav";
+@import "blocks/social";
 @import "blocks/btn";
-@import "blocks/section";
-@import "blocks/description";
+@import "blocks/works";
+@import "blocks/work";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/reviews";
 @import "blocks/arguments";
-@import "blocks/price";
+@import "blocks/technologies";
+@import "blocks/strength";
 @import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
 @import "blocks/contact";
 @import "blocks/form";
 @import "blocks/burger";
+@import "blocks/thank";
 
 // Helpers-------------
 @import "blocks/helpers";

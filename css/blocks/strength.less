@@ -1,0 +1,84 @@
+// main: ../style.less
+
+.strength{
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+.str__header{
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.str__title{
+    margin-bottom: 0.6rem;
+
+    font-size: 3rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;  
+    
+    @media @mobile {
+        font-size: 2.3rem;
+    }
+}
+
+
+.strength__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+.strength__col{
+    flex-basis: 50%;
+    padding: 0.5rem;
+
+    @media @mobile {
+        flex-basis: 100%;
+    }
+}
+.strength__item{
+    display: flex;  
+    background-color: fade(@black, 10%);
+    height: 110px;
+
+    border-radius: 50px;
+
+    box-shadow: 0 0 4px fade(#000, 25%);
+
+}
+.strength__image{
+    width: 20%;
+    text-align: center;
+}
+.strength__img{
+    width: 60px;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+}
+.strength__content{
+    width: 80%;
+    padding: 1rem 1rem;
+
+    @media @mobile {
+        margin-left: 10px;
+    }
+    
+}
+.strength__title{
+    font-size: 1.17em;
+    font-weight: bold;
+
+    @media @notebook {
+        font-size: 1rem;
+    }
+}
+.strength__text{
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+
+    @media @notebook {
+        font-size: .8rem;
+    }
+    @media @mobile {
+        font-size: .7rem;
+    }
+}

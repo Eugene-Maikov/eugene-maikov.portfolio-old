@@ -1,74 +1,78 @@
 // main: ../style.less
 
-.intro{
-    height: 100vh;
-    padding-top: 100px;
-    
-    background: #30344e
-    url("../images/bg.png")
-    center no-repeat;
-    background-size: cover; 
-    
+
+.intro__inner{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 120px;
     position: relative;
 
-    @media @mobile {
-        padding-top: 0;
-    }
-    @media @mobile-sm {
-        height: 500px;
-        padding-top: 0;
-    }
-} 
-.intro__inner{
-    width: 100%;
-    max-width: 970px;
-    margin: 0 auto;
-
-    text-align: center;
-}
-.intro__title {
-    margin: 0 0 30px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 90px;
-    font-weight: 600;
-    
-    line-height: 1.1;
-    color: #fff;
+    background:
+     url("../images/bg2.png")
+    right bottom no-repeat;
+    border-bottom: 1px solid fade(@gray, 30%);
 
     @media @tablet {
-        font-size: 70px;
-    }
-    @media @mobile {
-        font-size: 60px;
+        padding-top: 3rem;
+        padding-bottom: 5.3rem;
+
+        background-size: 415px auto;
     }
     @media @mobile-sm {
-        font-size: 35px;
+        background-size: 400px auto;
     }
-    @media @mobile-ltl {
-        font-size: 30px;
-    }
-
 }
-.intro__suptitle {
-    margin-bottom: 30px;
+.intro__content{
+    width: 50%;
 
-    font-size: 22px;
-    font-weight: 400;
-    color: #fff;
-    line-height: 1.5;
-    
+    @media @mobile-sm {
+        width: 100%;
+    }
+}
+.intro__suptitle{
+    font-size: 2.13rem;
+    color: @black;
+    font-weight: 200;
+
     @media @tablet {
-        padding: 0 3rem;
-    }
-    @media @mobile {
-        font-size: 19px;
-    }
-    @media @mobile-sm {
-        padding: 0 1rem;
-        font-size: 15px;
+        font-size: 1.5rem;
     }
 }
+.intro__title{
+    margin-bottom: 5px;
+
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+
+    @media @tablet {
+        font-size: 2rem;
+    }
+}
+.intro__text{
+    margin-bottom: 25px;
+
+    font-size: 1.2rem;
+    color: fade(@black, 70%); // Значение цвета и прозрачности
+}
+.intro__photo{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    top: 64px;
+    z-index: 1;
+    width: 270px;
+    height: 440px;
+
+    @media @tablet {
+        width: 230px;
+        height: 375px;
+        top: 0;
+        right: 40px;
+    }
+    @media @mobile-sm {
+        display: none;
+    }
+}
+
