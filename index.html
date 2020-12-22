@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header class="header"> 
+    <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="header__logo" href="#" >
-                    <img src="images/logo.svg" alt="">
+                <a class="header__logo" href="#">
+                    <img class="header__logo-img" src="images/logo.png" alt="">
                 </a>
                 <nav class="nav">
                     <a class="nav__link" href="#">Главная</a>
@@ -22,6 +22,9 @@
                     <a class="nav__link" href="delivery.html">Доставка</a>
                     <a class="nav__link" href="contacts.html">Контакты</a>
                 </nav>
+                <a href="#" class="burger">
+                    <img class="burger__icon" src="images/menu.svg" alt="">
+                </a>
                 <div class="header__social">
                     <div class="social__number">
                         <div class="social__number-icon"><img src="images/icons/number.svg" alt=""></div>
@@ -133,7 +136,7 @@
 
 
     <section class="page-section cooperation">
-        <h3 class="title title-1">Ваши выгоды и преимущества от сотрудничества с нами
+        <h3 class="title">Ваши выгоды и преимущества от сотрудничества с нами
         </h3>
         <div class="container">
             <div class="cooperation__inner">
@@ -263,7 +266,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <a class="footer__logo" href="#"><img src="images/logo.svg" alt=""></a>
+                <a class="footer__logo" href="#"><img class="footer__logo-img" src="images/logo.svg" alt=""></a>
                 <div class="site__map-1">
                     <a class="nav__link-footer" href="#">Главная</a>
                     <a class="nav__link-footer" href="catalog.html">Каталог</a>
@@ -278,12 +281,23 @@
                     <a href="#"><img class="footer__social-icon" src="images/icons/inst.svg" alt=""></a>
                     <a href="#"><img class="footer__social-icon" src="images/icons/youtube.svg" alt=""></a>
                 </div>
+
                 <div class="social__number social__number-footer">
-                    <div class="social__number-icon"><img src="images/icons/number.svg" alt=""></div>
+                    <div class="social__number-icon"><img class="social__number-icon-img" src="images/icons/number.svg"
+                            alt=""></div>
                     <a class="number" href="tel:+79135348008">+7-913-534-80-08</a>
                 </div>
-                <button class="btn">Заказать звонок</button>
+
+                <button class="btn btn-footer">Заказать звонок</button>
+                <div class="header__social footer-header">
+                    <div class="social__number">
+                        <div class="social__number-icon"><img src="images/icons/number.svg" alt=""></div>
+                        <a class="number" href="tel:+79135348008">+7-913-534-80-08</a>
+                    </div>
+                    <button class="btn">Заказать звонок</button>
+                </div>
             </div>
+            <a class="footer__logo-down" href="#"><img class="footer__logo-img" src="images/logo.svg" alt=""></a>
         </div>
     </footer>
 
@@ -291,7 +305,7 @@
 
 
 
-    <script src="js/main.min.js/"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
