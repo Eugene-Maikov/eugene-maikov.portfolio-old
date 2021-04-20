@@ -630,8 +630,8 @@ li.slick-active button {
 }
 .about__text {
     margin-bottom: 2.8rem;
-    font-size: 0.8rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.9;
     color: #6a696b;
     font-weight: 300;
 }
