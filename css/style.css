@@ -647,7 +647,8 @@ li.slick-active button {
 }
 .arg__header {
     margin-bottom: 3.6rem;
-    text-align: center;
+    text-align: left;
+
 }
 .arg__title {
     margin-bottom: 0.6rem;
@@ -675,6 +676,8 @@ li.slick-active button {
     font-size: 1.2rem;
     color: #6a696b;
     font-weight: 300;
+    line-height: 1.5;
+    max-width: 615px;
 }
 @media (max-width: 565px) {
     .arg__text {
