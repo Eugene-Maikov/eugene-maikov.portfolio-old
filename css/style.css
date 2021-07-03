@@ -732,7 +732,7 @@ li.slick-active button {
     padding-top: 7rem;
     display: block;
     width: 100%;
-    background: #332f30 url("../images/bg4.jpg") center no-repeat;
+    background-color: #2b2a2c;
     background-size: cover;
 }
 .tlg__header {
@@ -778,7 +778,7 @@ li.slick-active button {
 .technologies__item {
     width: 100%;
     background-color: rgba(255,255, 255, .8);
-    height: 330px;
+    height: 100%;
     text-align: center;
     border: #332f30 3px solid;
     transition: background 0.2s linear, border 0.2s linear;
@@ -792,7 +792,8 @@ li.slick-active button {
     }
 }
 .technologies__content {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
+    
 }
 @media (max-width: 565px) {
     .technologies__content {
@@ -806,6 +807,7 @@ li.slick-active button {
 }
 .technologies__text {
     margin-top: 0.6rem;
+    text-align: left;
 }
 .strength {
     padding-bottom: 5rem;
