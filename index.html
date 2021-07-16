@@ -123,6 +123,15 @@
 
 
             <div class="portfolio">
+                <div class="portfolio__col" data-cat="website" data-modal="#modal_project_mavic">
+                    <div class="work">
+                        <img class="work__image" src="images/porftolio/Превью_Mavic-1.jpg" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Категория: Website</div>
+                            <div class="work__title">Mavic Pro</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="portfolio__col" data-cat="website" data-modal="#modal_project_ActiveBox">
                     <div class="work">
                         <img class="work__image" src="images/porftolio/Превью_ActiveBox-1.jpg" alt="">
@@ -630,6 +639,52 @@
 
 
     <!-- Модальные окна -->
+    <div class="modal" id="modal_project_mavic">
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close>
+                <img src="images/icon/icon__modal/cancel.svg" alt="">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/porftolio/Превью_Mavic-1.jpg" width="790px"
+                                alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Mavic Pro</h3>
+                        <div class="modal-work__info">
+                            website <span class="modal-work__info-diviter">|</span> 2021
+                        </div>
+                    </div>
+                    <div class="modal-work__text">
+                        <p>Целевая страница с необычным переходом между разделами.
+                             Макет анимирован и адаптирован для всех видов экранов.</p>
+                    </div>
+                    <a
+                        href="https://eugene-maikov.github.io/Mavic/">https://eugene-maikov.github.io/Mavic/</a>
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/icon/icon__modal/left-arrow.svg" height="12" alt="">
+                            Предыдущий</button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Следующий
+                            <img src="images/icon/icon__modal/next.svg" height="12" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!--/.modal-work__content-->
+            </div>
+            <!--/.modal-work-->
+        </div>
+        <!--/.modal__dialog-->
+    </div>
+    <!--/.modal-->
     <div class="modal" id="modal_project_ActiveBox">
         <div class="modal__dialog">
             <button class="modal__close" type="button" data-close>
